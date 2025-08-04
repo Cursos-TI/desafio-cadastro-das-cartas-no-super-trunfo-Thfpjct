@@ -1,73 +1,97 @@
 #include <stdio.h>
-//codigos
-char estado[] = {'A','B','C','D','E','F','G','H'};//codigo de estado de A a H
-
-//Informaçoes do usuarios
-char cidade[20];//Nome da cidade
-
-int numcard = 0;//Numero da carta
-int populus;//População
-int turismo;//Pontos turisticos
-
-float area;//Tamanho da area
-float pib;//PIB
+#include <string.h>
 
 int main() {
 
+//codigos
+char estado1[10], estado2[10];
+
+//Informaçoes do usuarios
+char cidade1[20], cidade2[20];//Nome da cidade
+
+int carta1, carta2;
+int numcard1 = 0, numcard2 = 0;//Numero da carta
+int turismo1, turismo2;//Pontos turisticos
+int codigo1, codigo2;
+
+float area1, area2;//Tamanho da area
+float populus1, populus2;//População
+float pib1, pib2;//PIB
+
+//Primeira carta começa aqui
+    printf("Bem vindo ao Super Trunfo! preencha os dados abaixo \n");
+
     //A primeira carta começa aqui
+    printf("Escolha o numero da carta de 1 a 4 \n");
+    scanf("%d", &carta1);
+    
+    printf("Adicione um codigo de 1 a 4 \n");
+    scanf("%d", &codigo1);
+
+    printf("Qual a primeira letra do estado? \n");
+    scanf("%s", &estado1);
+
+    getchar();//Essa função conserta o erro de fgets() sendo ignorado
     printf("Qual o nome da Cidade? \n");
-    scanf("%s", &cidade);
+    fgets(cidade1, 180, stdin);
 
     printf("Qual o numero da população? \n");
-    scanf("%d", &populus);
+    scanf("%f", &populus1);
 
     printf("Qual o tamanho da Area da cidade em Km²? \n");
-    scanf("%f", &area);
+    scanf("%f", &area1);
 
     printf("Qual o PIB desta cidade? \n");
-    scanf("%f", &pib);
+    scanf("%f", &pib1);
 
     printf("Qual o numero de pontos turisticos na cidade? \n");
-    scanf("%d", &turismo);
+    scanf("%d", &turismo1);
 
-    numcard++;//adiciona um numero ao codigo
-    int stdX = 0;//Define o codigo de estado como 0 que seria "A"
+    printf("Carta %d: \nEstado: %c \n", carta1, estado1); //Numero da carta e Estado A
+    printf("Codigo: %s0%d \n",estado1, codigo1);//Codigo: A0#
+    printf("Nome da Cidade: %s \n", cidade1);//Nome da cidade: Belem
+    printf("População: %f \n", populus1);//População: 150000
+    printf("Área: %f Km² \n", area1);//Àrea: 1500.10 Km²
+    printf("PIB: %f Bilhoes de reais \n", pib1);//PIB: 600.20 bilhoes de reais
+    printf("Numero de Pontos Turísticos: %d \n", turismo1);//Numero de Pontos Turísticos: 10
 
-    printf("Carta %d: \nEstado: %c \n", numcard, estado[stdX]); //Carta #
-    printf("Codigo: %c0%d \n",estado[stdX], numcard);//Codigo: A0#
-    printf("Nome da Cidade: %s \n", cidade);//Nome da cidade: Belem
-    printf("População: %d \n", populus);//População: 150000
-    printf("Área: %f Km² \n", area);//Àrea: 1500.10 Km²
-    printf("PIB: %f Bilhoes de reais \n", pib);//PIB: 600.20 bilhoes de reais
-    printf("Numero de Pontos Turísticos: %d \n", turismo);//Numero de Pontos Turísticos: 10
 
-    //A segunda carta começa aqui
+// A segunda carta começa aqui
+    printf("Agora vamos criar a segunda carta! \n");
+   
+    printf("Escolha o numero da carta de 1 a 4 \n");
+    scanf("%d", &carta2);
+    
+    printf("Adicione um codigo de 1 a 4 \n");
+    scanf("%d", &codigo2);
+
+    printf("Qual a primeira letra do estado? \n");
+    scanf("%s", &estado2);
+
+    getchar();
 
     printf("Qual o nome da Cidade? \n");
-    scanf("%s", &cidade);
+    fgets(cidade2, 180, stdin);
 
     printf("Qual o numero da população? \n");
-    scanf("%d", &populus);
+    scanf("%f", &populus2);
 
     printf("Qual o tamanho da Area da cidade em Km²? \n");
-    scanf("%f", &area);
+    scanf("%f", &area2);
 
     printf("Qual o PIB desta cidade? \n");
-    scanf("%f", &pib);
+    scanf("%f", &pib2);
 
     printf("Qual o numero de pontos turisticos na cidade? \n");
-    scanf("%d", &turismo);
+    scanf("%d", &turismo2);
 
-    numcard++;//adiciona um numero ao codigo
-    stdX++;//puxa o numero de estado por 1 digito, nesse caso 1="B"
-
-    printf("Carta %d: \nEstado: %c \n", numcard, estado[stdX]); //Carta #
-    printf("Codigo: %c0%d \n",estado[stdX], numcard);//Codigo: A0#
-    printf("Nome da Cidade: %s \n", cidade);//Nome da cidade: Belem
-    printf("População: %d \n", populus);//População: 150000
-    printf("Área: %f Km² \n", area);//Àrea: 1500.10 Km²
-    printf("PIB: %f Bilhoes de reais \n", pib);//PIB: 600.20 bilhoes de reais
-    printf("Numero de Pontos Turísticos: %d \n", turismo);//Numero de Pontos Turísticos: 10
-
+    printf("Carta %d: \nEstado: %c \n", carta2, estado2); //Numero da carta e Estado A
+    printf("Codigo: %s0%d \n",estado2, codigo2);//Codigo: A0#
+    printf("Nome da Cidade: %s \n", cidade2);//Nome da cidade: Belem
+    printf("População: %f \n", populus2);//População: 150000
+    printf("Área: %f Km² \n", area2);//Àrea: 1500.10 Km²
+    printf("PIB: %f Bilhoes de reais \n", pib2);//PIB: 600.20 bilhoes de reais
+    printf("Numero de Pontos Turísticos: %d \n", turismo2);//Numero de Pontos Turísticos: 10
+    
     return 0;
 }
